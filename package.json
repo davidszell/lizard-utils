@@ -1,0 +1,28 @@
+{
+  "name": "lizard-utils",
+  "version": "0.0.1",
+  "description": "Monitor operating system related data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidszell/lizard-utils.git"
+  },
+  "keywords": [
+    "system information",
+    "sysinfo",
+    "os",
+    "operating system",
+    "util",
+    "monitor",
+    "monitoring"
+  ],
+  "author": "David Szell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidszell/lizard-utils/issues"
+  },
+  "homepage": "https://github.com/davidszell/lizard-utils#readme"
+}
