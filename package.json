@@ -1,10 +1,11 @@
 {
   "name": "lizard-utils",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Monitor operating system related data.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/test.js",
+    "lint": "eslint ./"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/davidszell/lizard-utils/issues"
   },
-  "homepage": "https://github.com/davidszell/lizard-utils#readme"
+  "homepage": "https://github.com/davidszell/lizard-utils#readme",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-security": "^1.4.0",
+    "mocha": "^8.3.2"
+  }
 }

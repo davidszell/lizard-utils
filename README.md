@@ -6,8 +6,26 @@
 Lightweight web dashboard to monitor system resources.
 
 ## Installation
-One line installation with npm.
-
 ```sh
 npm install lizard-utils --save
 ```
+
+## Example
+
+```js
+const lizardUtils = require('lizardUtils');
+
+const coreCount = lizardUtils.cpu.coreCount(); // 12
+
+lizardUtils.cpu.avgLoads(1000).then((data) => {
+    console.log(data.avgLoadPercent); // 25.8
+});
+
+lizardUtils.cpu.subscribe(1000, (data) => {
+    console.log(data.avgLoadPercent); // 25.8
+});
+```
+
+## See also
+
+* [API documentation](docs/API.md)
