@@ -1,0 +1,10 @@
+language: node_js
+node_js: "node"
+os: "linux"
+dist: "xenial"
+jobs:
+  include:
+    - stage: "ESLint"
+      script: npm run lint
+    - stage: "Test"
+      script: npm test
