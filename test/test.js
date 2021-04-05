@@ -17,7 +17,7 @@ describe('CPU', () => {
                 assert.ok(data.coreData);
                 assert.ok(data.coreData.length > 0);
                 done();
-            })
+            });
         });
     });
     
@@ -45,8 +45,8 @@ describe('Memory', () => {
             assert.ok(data.usedMiB >= 0);
             assert.ok(data.usedPercent >= 0);
             done();
-        })
-    })
+        });
+    });
     
     describe('subscribe', () => {
         it('returns memory info', (done) => {
@@ -59,6 +59,6 @@ describe('Memory', () => {
                 clearInterval(timer);
                 done();
             });
-        })
-    })
+        });
+    });
 });

@@ -27,5 +27,4 @@ lizardUtils.cpu.subscribe(1000, (data) => {
 ```
 
 ## See also
-
-* [API documentation](docs/API.md)
+  * [API documentation](docs/API.md)
