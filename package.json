@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/test.js",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "lint-md": "remark ."
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,13 @@
   "devDependencies": {
     "eslint": "^7.23.0",
     "eslint-plugin-security": "^1.4.0",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "remark-cli": "^9.0.0",
+    "remark-preset-lint-recommended": "^5.0.0"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }
