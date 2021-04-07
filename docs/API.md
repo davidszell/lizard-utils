@@ -37,7 +37,7 @@ lizardUtils.cpu.subscribe(1000, (data) => {
         ]
     }
     */
-})
+});
 ```
 
 ### lizardUtils.cpu.avgLoads(sampleTime) ⇒ <code>Promise</code>
@@ -69,7 +69,7 @@ lizardUtils.cpu.avgLoads(1000).then((data) => {
         ]
     }
     */
-})
+});
 ```
 
 ### lizardUtils.cpu.coreCount() ⇒ <code>Number</code>
@@ -104,12 +104,12 @@ lizardUtils.memory.subscribe(1000, (data) => {
         usedPercent: 37.5
     }
     */
-})
+});
 ```
 
 ### lizardUtils.memory.&#65279;info() ⇒ <code>Object</code>
 
-_Get memory load data periodically._
+_Get memory load data._
 
 __Example__
 ```js
@@ -122,4 +122,81 @@ const memoryInfo = lizardUtils.memory.info();
     usedPercent: 37.5
 }
 */
+```
+
+## lizardUtils.system
+
+### lizardUtils.system.&#65279;info() ⇒ <code>Object</code>
+
+_Get general system information._
+
+```js
+lizardUtils.system.info().then((data) => {
+    console.log(JSON.stringify(data));
+    /* 
+    {
+        arch: x64,
+        hostname: linux-pc,
+        platform: linux,
+        release: 2.6.35-22-generic,
+        uptime: 651618
+    }
+    */
+});
+```
+
+### lizardUtils.system.subscribe(interval, callback) ⇒ <code>Timeout</code>
+
+_Get general system information periodically._
+
+| Param | Type | Description |
+| --- | --- | --- |
+| interval | Number | Interval in milliseconds. |
+| callback | Function | Function called with the system information. |
+
+```js
+lizardUtils.system.subscribe(1000, (data) => {
+    console.log(JSON.stringify(data));
+    /* 
+    {
+        arch: "x64",
+        hostname: "linux-pc",
+        platform: "linux",
+        release: "2.6.35-22-generic",
+        uptime: 651618
+    }
+    */
+});
+```
+
+## lizardUtils.network
+
+### lizardUtils.network.&#65279;interfaces(internal, family) ⇒ <code>Object</code>
+
+_Get network interfaces._
+
+| Param | Type | Description |
+| --- | --- | --- |
+| internal | Boolean | Return internal or external interfaces |
+| family | String | Specify what address types to return. (<code>IPv4</code>, <code>IPv6</code> or <code>All</code>) |
+
+```js
+lizardUtils.network.interfaces(true, 'IPv4').then((data) => {
+    console.log(JSON.stringify(data));
+    /* 
+    [
+        {
+            name: "lo0",
+            mac: "00:00:00:00:00:00",
+            addresses: [
+                {
+                    address: "127.0.0.1",
+                    family: "IPv4",
+                    netmask: "255.0.0.0"
+                }
+            ]
+        }
+    ]
+    */
+});
 ```
