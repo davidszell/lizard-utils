@@ -135,10 +135,10 @@ lizardUtils.system.info().then((data) => {
     console.log(JSON.stringify(data));
     /* 
     {
-        arch: x64,
-        hostname: linux-pc,
-        platform: linux,
-        release: 2.6.35-22-generic,
+        arch: "x64",
+        hostname: "linux-pc",
+        platform: "linux",
+        release: "2.6.35-22-generic",
         uptime: 651618
     }
     */
