@@ -126,10 +126,11 @@ const memoryInfo = lizardUtils.memory.info();
 
 ## lizardUtils.system
 
-### lizardUtils.system.&#65279;info() ⇒ <code>Object</code>
+### lizardUtils.system.&#65279;info() ⇒ <code>Promise</code>
 
 _Get general system information._
 
+__Example__
 ```js
 lizardUtils.system.info().then((data) => {
     console.log(JSON.stringify(data));
@@ -154,6 +155,7 @@ _Get general system information periodically._
 | interval | Number | Interval in milliseconds. |
 | callback | Function | Function called with the system information. |
 
+__Example__
 ```js
 lizardUtils.system.subscribe(1000, (data) => {
     console.log(JSON.stringify(data));
@@ -171,7 +173,7 @@ lizardUtils.system.subscribe(1000, (data) => {
 
 ## lizardUtils.network
 
-### lizardUtils.network.&#65279;interfaces(internal, family) ⇒ <code>Object</code>
+### lizardUtils.network.&#65279;interfaces(internal, family) ⇒ <code>Promise</code>
 
 _Get network interfaces._
 
@@ -180,6 +182,7 @@ _Get network interfaces._
 | internal | Boolean | Return internal or external interfaces |
 | family | String | Specify what address types to return. (<code>IPv4</code>, <code>IPv6</code> or <code>All</code>) |
 
+__Example__
 ```js
 lizardUtils.network.interfaces(true, 'IPv4').then((data) => {
     console.log(JSON.stringify(data));
@@ -199,4 +202,41 @@ lizardUtils.network.interfaces(true, 'IPv4').then((data) => {
     ]
     */
 });
+```
+
+### lizardUtils.network.&#65279;subscribe(internal, callback\[, options\]) ⇒ <code>Timeout</code>
+
+_Get network interfaces periodically._
+
+| Param | Type | Description |
+| --- | --- | --- |
+| interval | Number | Interval in milliseconds. |
+| callback | Function | Function called with the system information. |
+
+__Options__
+| Param | Type | Description | Default |
+| --- | --- | --- | --- |
+| internal | Boolean | Return internal or external interfaces | false |
+| family | String | Specify what address types to return. (<code>IPv4</code>, <code>IPv6</code> or <code>All</code>) | <code>All</code> |
+
+__Example__
+```js
+lizardUtils.network.subscribe(1000, (data) => {
+    console.log(JSON.stringify(data));
+    /* 
+    [
+        {
+            name: "lo0",
+            mac: "00:00:00:00:00:00",
+            addresses: [
+                {
+                    address: "127.0.0.1",
+                    family: "IPv4",
+                    netmask: "255.0.0.0"
+                }
+            ]
+        }
+    ]
+    */
+}, {internal: true, family: 'IPv4'});
 ```
