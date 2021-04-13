@@ -13,4 +13,4 @@ jobs:
         - bash <(curl -Ls https://coverage.codacy.com/get.sh) download
       script: npm run coverage
       after_success:
-        - bash <(curl -Ls https://coverage.codacy.com/get.sh)
+        - bash <(curl -Ls https://coverage.codacy.com/get.sh) report -t coverage/lcov.info
