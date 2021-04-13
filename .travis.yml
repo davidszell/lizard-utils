@@ -8,3 +8,9 @@ jobs:
       script: npm run lint
     - stage: "Test"
       script: npm test
+    - stage: "Coverage"
+      before_script:
+        - bash <(curl -Ls https://coverage.codacy.com/get.sh) download
+      script: npm run coverage
+      after_success:
+        - bash <(curl -Ls https://coverage.codacy.com/get.sh)

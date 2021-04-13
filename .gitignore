@@ -16,3 +16,4 @@ preact-*.tgz
 preact.tgz
 jsx-csstype.d.ts
 pre-built.tar.gz
+.nyc_output
