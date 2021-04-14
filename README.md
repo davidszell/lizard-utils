@@ -2,7 +2,8 @@
 
 [![Version](https://img.shields.io/github/package-json/v/davidszell/lizard-utils)](https://github.com/davidszell/lizard-utils/releases/latest)
 [![License](https://img.shields.io/github/license/davidszell/lizard-utils)](https://github.com/davidszell/lizard-utils/blob/main/LICENSE)
-[![Codacy Badge](https://img.shields.io/codacy/grade/299659df6a4c451a9160b02aa484d00f)](https://www.codacy.com/gh/davidszell/lizard-utils/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=davidszell/lizard-monitor&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://img.shields.io/codacy/grade/299659df6a4c451a9160b02aa484d00f)](https://www.codacy.com/gh/davidszell/lizard-utils/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=davidszell/lizard-utils&amp;utm_campaign=Badge_Grade)
+[![Codacy Coverage](https://img.shields.io/codacy/coverage/299659df6a4c451a9160b02aa484d00f)](https://www.codacy.com/gh/davidszell/lizard-utils/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=davidszell/lizard-utils&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://img.shields.io/travis/com/davidszell/lizard-utils)](https://travis-ci.com/github/davidszell/lizard-utils)
 
 Lightweight web dashboard to monitor system resources.
