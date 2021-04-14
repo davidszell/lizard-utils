@@ -1,4 +1,4 @@
-# Lizard Monitor
+# Lizard Utils
 
 __Example__
 ```js
