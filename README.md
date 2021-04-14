@@ -6,7 +6,7 @@
 [![Codacy Coverage](https://img.shields.io/codacy/coverage/299659df6a4c451a9160b02aa484d00f)](https://www.codacy.com/gh/davidszell/lizard-utils/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=davidszell/lizard-utils&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://img.shields.io/travis/com/davidszell/lizard-utils)](https://travis-ci.com/github/davidszell/lizard-utils)
 
-Lightweight web dashboard to monitor system resources.
+Utilities to monitor operating system related data.
 
 ## Installation
 ```sh
