@@ -9,6 +9,7 @@ jobs:
     - stage: "Test"
       script: npm test
     - stage: "Coverage"
+      if: branch = main
       before_script:
         - bash <(curl -Ls https://coverage.codacy.com/get.sh) download
       script: npm run coverage
